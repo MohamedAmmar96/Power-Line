@@ -273,12 +273,13 @@ html[dir=ltr] .user-tools .search-box {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 1px solid #dfdee3;
+    position: relative;
+    /* border-bottom: 1px solid #dfdee3; */
 }
 
 .search-bar .search-click {
-    width: 4%;
-    height: 40px;
+    position: absolute;
+    right: 0;
     background-color: transparent;
     outline: none;
     border: none;
@@ -287,13 +288,12 @@ html[dir=ltr] .user-tools .search-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 4px;
     transition: all 0.4s ease-in-out;
 }
 
 html[dir=ltr] .search-bar .search-click {
-    margin-left: 0;
-    margin-right: 4px;
+    right: auto;
+    left: 0;
 }
 
 .search-bar .search-click:hover {
@@ -301,12 +301,25 @@ html[dir=ltr] .search-bar .search-click {
 }
 
 .search-bar .search-input {
-    width: 96%;
+    width: 100%;
     height: 40px;
     border: none;
     outline: none;
     font-family: "regular";
+    background-color: transparent;
     font-size: 16px;
+    padding-right: 30px;
+    border-bottom: 1px solid #dfdee3;
+    transition: all 0.4s ease-in-out;
+}
+
+html[dir=ltr] .search-bar .search-input {
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.search-bar .search-input:focus {
+    border-bottom: 1px solid #e62f0e;
 }
 
 .search-bar .search-input::placeholder {
@@ -961,13 +974,14 @@ html[dir=ltr] .footer-top .footer-col .footer-heading {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid #dfdee3;
+    /* border-bottom: 1px solid #dfdee3; */
     margin-bottom: 25px;
+    position: relative;
 }
 
 .email-box .subscribe {
-    width: 6%;
-    height: 40px;
+    position: absolute;
+    right: 0;
     border: none;
     outline: none;
     background-color: transparent;
@@ -977,17 +991,36 @@ html[dir=ltr] .footer-top .footer-col .footer-heading {
 }
 
 html[dir=ltr] .email-box .subscribe {
+    right: auto;
+    left: 0;
+}
+
+html[dir=ltr] .email-box .subscribe {
     margin-left: 0;
     margin-right: 10px;
 }
 
 .email-box .email-input {
-    width: 94%;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-right: 30px;
     border: none;
+    border-bottom: 1px solid #dfdee3;
     outline: none;
     font-family: "regular";
     font-size: 16px;
     color: #000;
+    transition: all 0.4s ease-in-out;
+}
+
+html[dir=ltr] .email-box .email-input {
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.email-box .email-input:focus {
+    border-bottom: 1px solid #e62f0e;
 }
 
 .email-box .email-input::placeholder {
@@ -1141,7 +1174,7 @@ html[dir=ltr] .copyrights .last-p .tasawk {
     cursor: pointer;
     display: none;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .overlay-box3 {

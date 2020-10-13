@@ -24,16 +24,6 @@
         html[dir=ltr] .user-tools .search-box {
             margin-right: 0;
         }
-        .search-box .search-bar {
-            border-bottom: 1px solid #bbb;
-        }
-        .search-bar .search-click {
-            width: 8%;
-        }
-        .search-bar .search-input {
-            width: 92%;
-            background-color: transparent;
-        }
         .search-bar .search-input::placeholder {
             color: #444;
         }
@@ -473,13 +463,16 @@
     
     @media (max-width: 500px) {
         .header-content .logo {
-            width: 100%;
+            width: 120%;
+        }
+        .header-content .logo .logo-img {
+            max-width: 100%;
         }
         .user-tools .search-box {
             width: calc(100% - 10%);
         }
         .header-content .terms {
-            height: 60px;
+            height: 70px;
         }
         .terms .menu,
         .terms .search {
@@ -542,16 +535,6 @@
         }
         html[dir=ltr] .user-tools .search-box {
             margin-right: 0;
-        }
-        .search-box .search-bar {
-            border-bottom: 1px solid #bbb;
-        }
-        .search-bar .search-click {
-            width: 8%;
-        }
-        .search-bar .search-input {
-            width: 92%;
-            background-color: transparent;
         }
         .search-bar .search-input::placeholder {
             color: #444;
